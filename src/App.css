@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #ddd;
 }
 
-.App-link {
-  color: #61dafb;
+.calculator{
+  background-color: #fff;
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.1),
+  inset 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid royalblue;
+  padding: 10px;
+  padding-top: 20px;
+  border-radius: 10px;
+  font-size: 30px;
+  height: 64px;
+}
+
+.result{
+  position: absolute;
+  font-size: 14px;
+  top: 5px;
+}
+
+.operations{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.operation {
+  text-align: center;
+  border: 1px solid royalblue;
+  border-radius: 10px;
+  padding: 10px;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: transparent;
+}
+
+.operation:hover {
+  cursor: pointer;
+  background-color: #eee;
+  transition: .2s;
+}
+
+.numbers{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.number {
+  text-align: center;
+  border: 1px solid royalblue;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.number:hover {
+  cursor: pointer;
+  background-color: #eee;
+  transition: .2s;
 }
